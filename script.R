@@ -40,3 +40,8 @@ print(factor,digits = 2,cut = F,sort=TRUE)
 #p-value
 factor$PVAL
 factor$score.cor
+Descriptivos <- read_excel("Descriptivos.xlsx")
+Genero_Factor <- factor(Descriptivos$`Indique su genero`, levels=c("Femenino", "Masculino"))
+(Genero_Factor)
+Ingresos_Factor <- Factor <- factor(Descriptivos$Ingresos, levels=c("Menos de 700000", "700001 y 1400000", "1400001 y 2100000", "2100000 y 2.800000", "2800001 y 3500000", "3500001, 4200000", "Mas de 4200000" )) 
+(Ingresos_Factor)
