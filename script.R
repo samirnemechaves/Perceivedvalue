@@ -32,6 +32,8 @@ df2<- select(df, -"x12", -"x13", -"x14" )
 #kMO
 KMO(df2)
 bartlett.test(df2)
+#cronbach and item-total
+psych::alpha(df2)
 #Exploratory Factorial ANalysis ASI
 factor<-fa(df2, nfactors = 4,fm = "ml",rotate ="oblimin",cor = "poly")
 print(factor,digits = 2,cut = F,sort=TRUE)
