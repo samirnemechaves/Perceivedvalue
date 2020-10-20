@@ -28,7 +28,7 @@ factor<-fa(df, nfactors = 4,fm = "ml",rotate ="oblimin",cor = "poly")
 print(factor,digits = 2,cut = F,sort=TRUE)
 #eliminar 12, 13, 14
 names(df)
-df2<- select(df, -"x12", -"x13", -"x14" )
+df2<- dplyr::select(df, -"x12", -"x13", -"x14" )
 #kMO
 KMO(df2)
 bartlett.test(df2)
